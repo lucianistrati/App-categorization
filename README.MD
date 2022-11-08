@@ -21,3 +21,5 @@ You are given:
 
 Observations:
 * in order to efficiently compute the semantic similarity I would also to try to clusterize the data using this semantic similarity metric. An even better idea would be to create an average of the embeddings of a class and compare the averaged out embeddings instead of computing each and every one of them separately. 
+
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://stand-with-ukraine.pp.ua)
