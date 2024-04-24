@@ -19,6 +19,29 @@ You are given:
 - In case of removing a category, I would also look at the semantic similarity of the category name and perhaps the semantic similarity of the descriptions/titles in general.
 - I would test semantic similarity of the title and category and/or image similarity of the icons
 
+
+App Categorization
+This repository presents a solution for categorizing millions of apps into thousands of categories based on their title, description, and icon. The proposed approach involves using a classification algorithm that utilizes a multimodal neural network for feature extraction from the textual and visual components of the apps.
+
+Feature Extraction
+
+For feature extraction, the title and description of each app are processed using text transformers such as BERT, while the icon images are processed using a visual transformer (VIT). The outputs of these transformers are concatenated and passed through a fully connected neural network to generate feature representations for classification.
+
+Model Training and Performance
+
+The model is trained using labeled data and evaluated based on metrics such as accuracy, precision, recall, and F1-score. Additionally, the confusion matrix is analyzed to identify pairs of categories that are frequently confused.
+
+Adapting Categories
+
+When adding or removing categories, semantic similarity measures are used to compare the new category with existing ones. If the similarity is high, the new category may be merged with an existing one. Clustering techniques may also be employed to efficiently compute semantic similarity and identify redundant categories.
+
+Further Improvements
+
+To enhance efficiency, clustering techniques can be applied to compute semantic similarity and create clusters of similar categories. Additionally, averaging embeddings of categories can reduce the computational overhead of comparing each embedding individually. Experimentation with different text and image preprocessing techniques can also improve model performance.
+
+The sample code provided demonstrates the preprocessing and feature extraction steps for app data, serving as a foundation for building the app categorization model. Further development can include model training, prediction, and evaluation components to create a complete solution.
+
+
 Observations:
 * in order to efficiently compute the semantic similarity I would also to try to clusterize the data using this semantic similarity metric. An even better idea would be to create an average of the embeddings of a class and compare the averaged out embeddings instead of computing each and every one of them separately. 
 
